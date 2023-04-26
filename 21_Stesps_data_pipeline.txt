@@ -1,0 +1,38 @@
+1. SDK - init  > gcloud init
+2. create bucket >gsutil mb -l -c gs://batch7/usecase/data/
+3. check bucket  >gsutil ls gs://batch7/usecase/data
+4. create landing zone(local path for now) project path 
+5. check landing zone path with credentials
+6. verify file path and file format
+7. copy command to load into GCS > gsutil cp C:\CDE\usecases\usecase1\emp_data.csv gs://batch7/usecase/data/emp_data.csv
+8. verify file and data in GCS bucket 
+
+
+9. Create Stage & History datasets in BQ with Company naming standards
+
+
+
+
+10. verify dataset name and properties
+11. prepare DDL script for (Stage, History, Audit/control, Archive)
+12. Create stage & hist tables in specific dataset
+13. Develop Load scripts and load data from GCS to stage table
+14  Verify the data column by column with Stage table
+15. Entry into Audit table on stg load
+16. Run Load script to load the data from stage to History with transformation.
+17. Entry into Audit table on History load
+18. Verify the data column by column in History as per DIS
+19. Load data into Archive table/ Archive GCS Bucket
+20. Create Auth Views on top of History tables - As per the entitlemnt logic
+21. Verify views data as per the entitlemnt logic.
+
+-------------------
+1. connect with source team
+2. connect with IT team (NAS)
+3. SFTP json key creation, validatity
+4. exchange b/w source & Landing zone
+5. JIRA ticket need to be raised for path creation
+6. Landing zone path access request
+7. file format agrement - <source>_<table>_<dataformat>.<file format>
+                            voc_mail_echange_dd-mm-yyyy.csv
+
